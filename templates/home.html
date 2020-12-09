@@ -1,0 +1,15 @@
+{% extends  "baseTemplate.html" %}
+{% block title %}Hang Man{% endblock %}
+{% block PageConetent %}
+<link rel="stylesheet" type="text/css" href="/static/CSS/homeCss.css">
+<script type="text/javascript" src="\static\JS\home.js"></script>
+<from class="box" action="home.html" method="post">
+    <div id="GameTitle"></div>
+    <br>
+    <br>
+    <input type="text" name="" Placeholder="Guess Word / Letter">
+    <input type="submit" name="" value="Guess">
+</from>
+
+
+{% endblock %}
