@@ -13,11 +13,12 @@ body{
 .letter-block{
     padding-bottom:-10px;
 }
-.WordGuess{
+ .WordGuess{
     Color:white;
     font-family: sans-serif;
     position: relative;
 }
+/*
 .WordGuess:before{
     content:" ";
     display:block;
@@ -37,7 +38,7 @@ body{
     position: absolute;
     right:-10px;
     top:50%
-}
+} */
 
 .box{
     width:500px;
