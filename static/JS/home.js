@@ -88,6 +88,14 @@ setTimeout(hangManRightArm,1000);
 }
 
 function guessRandomWord(){
-    // Api Call To Python And Get Results
-    document.getElementById("randomWord") .innerHTML ='Hello World'
+    // Api Call To Python And Get Result
+    
+    var current_url = window.location;
+    document.getElementById("randomWord") .innerHTML ='Random Word Generated'
+    // fetch(current_url+"GuessWord"),{
+    //     method:"POST"
+    //     body:"jasom"
+    }
+    
+    
  }
