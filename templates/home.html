@@ -6,9 +6,26 @@
 <from class="box" action="home.html" method="post">
     <div id="GameTitle"></div>
     <br>
+    <div class="HangmanPicture">
+        <canvas ID="HangMan"></canvas>
+    </div>
+    <div class="RandomWordContent" link method="get">
+        <br>
+        <H2 id="randomWord">Word : _ _ _ _ </H2>
+    </div>
     <br>
-    <input type="text" name="" Placeholder="Guess Word / Letter">
-    <input type="submit" name="" value="Guess">
+    <div class="letter-block">
+        <h3 class="WordGuess">Guess the letter</h3>
+        <br>
+        <br>
+    </div>
+    <br>
+    <div class="word-block">
+        <h3 class="WordGuess">Guess the word</h3>
+        <input type="text" name="" Placeholder="Word">
+    </div>
+    <input type="submit" name="" value="Guess" onclick="guessRandomWord()">
+
 </from>
 
 

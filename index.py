@@ -12,6 +12,13 @@ app.permanent_session_lifetime = timedelta(minutes=30) # time before session dat
 def home():
     return render_template("home.html") 
 
+@app.route('/GuessWord', methods=["POST"])
+def GuessWord():
+    data = request.get_json()
+    name = data["body"]["name"]
+    print(name)
+    return json.dumps({'result' : name})
+
 
 
 
