@@ -71,10 +71,12 @@ function hangManLeftArm(){
     var elementID= "HangMan";
     drawLine(elementID,100,85,80,95,3);
 }
-
+ function guessRandomWord(){
+    document.getElementById("randomWord") .innerHTML ='Hello World'
+ }
 
 typing();
-drwaHangMangallows();
+setTimeout(drwaHangMangallows,200);
 setTimeout(hangManHead,400);
 setTimeout(hangManChest,500);
 setTimeout(hangManLeftLeg,600);
@@ -84,3 +86,8 @@ setTimeout(hangManLeftArm,900);
 setTimeout(hangManRightArm,1000);
 
 }
+
+function guessRandomWord(){
+    // Api Call To Python And Get Results
+    document.getElementById("randomWord") .innerHTML ='Hello World'
+ }

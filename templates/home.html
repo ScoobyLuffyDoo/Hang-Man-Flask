@@ -9,9 +9,9 @@
     <div class="HangmanPicture">
         <canvas ID="HangMan"></canvas>
     </div>
-    <div class="RandomWordContent">
+    <div class="RandomWordContent" link method="get">
         <br>
-        <H2>Word : _ _ _ _ </H2>
+        <H2 id="randomWord">Word : _ _ _ _ </H2>
     </div>
     <br>
     <div class="letter-block">
@@ -24,7 +24,7 @@
         <h3 class="WordGuess">Guess the word</h3>
         <input type="text" name="" Placeholder="Word">
     </div>
-    <input type="submit" name="" value="Guess">
+    <input type="submit" name="" value="Guess" onclick="guessRandomWord()">
 
 </from>
 
