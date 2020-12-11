@@ -86,24 +86,45 @@ window.onload = function () {
     setTimeout(hangManRightArm, 1000);
 
 }
-function guessRandomWord() {
+function RandomWord() {
     var GuessWord =  document.getElementById("InputWord").value;
     console.log(GuessWord)
 
     fetch('http://127.0.0.1:5000/GuessWord', {
-        method: 'POST',
-        // headers: {
-        //   'content-type': 'application/json',
-        //    authorization: ''
-        // },
-        body: {
-          name: 'tets',
-          age: 8
-        }
+        method: 'POST',    
       })
         .then(response => 
             response.json())
         .then(json => {
             document.getElementById("randomWord").innerHTML = json.result  
         })      
+}
+
+async function guessRandomWord(){
+    var response =""
+    // Get the Guessed Word Form the front end 
+    var GuessWord =  document.getElementById("InputWord").value;
+    // Build Json String 
+    var data = JSON.stringify({
+        "guessedWord": GuessWord
+      });
+      
+      var xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+          return_val =JSON.parse(this.responseText)
+          document.getElementById("randomWord").innerHTML =return_val.result
+          response = return_val.result;
+        }
+      });
+      
+      xhr.open("POST", "http://127.0.0.1:5000/GuessWord");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      
+      xhr.send(data);
+      console.log(response)
+      return response
+
+    
 }
