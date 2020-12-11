@@ -15,9 +15,8 @@ def home():
 @app.route('/GuessWord', methods=["POST"])
 def GuessWord():
     data = request.get_json()
-    name = data["body"]["name"]
-    print(name)
-    return json.dumps({'result' : name})
+    print(data)
+    return json.dumps({'result' : 'name'})
 
 
 
